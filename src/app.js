@@ -1,5 +1,5 @@
-import { express } from "express";
-import { Cors } from "cors";
+import  Express  from "express";
+import  cors  from "cors";
 import { Db, MongoClient } from "mongodb";
 import Joi from "joi";
 import dotenv from "dotenv";
@@ -10,9 +10,9 @@ import bcrypt from "bcrypt";
 dotenv.config()
 
 // 
-const app = express()
-app.use(Cors())
-app.use(express.json())
+const app = Express()
+app.use(cors())
+app.use(Express.json())
 
 // Server mongo reading and editing by api
 const mongoClient = new MongoClient(process.env.DATABASE_URL);
